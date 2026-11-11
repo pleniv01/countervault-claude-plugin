@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "countervault": {
+      "type": "http",
+      "url": "https://countervault-mcp-production.up.railway.app/mcp"
+    }
+  }
+}

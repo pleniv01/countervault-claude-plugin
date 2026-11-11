@@ -1,0 +1,15 @@
+{
+  "name": "countervault",
+  "displayName": "Countervault",
+  "version": "0.1.0",
+  "description": "Check public Countervault receipts, compare file fingerprints and understand what the evidence establishes.",
+  "author": { "name": "Countervault", "url": "https://countervault.co" },
+  "homepage": "https://countervault.co",
+  "repository": "https://github.com/pleniv01/countervault-claude-plugin",
+  "license": "MIT",
+  "icon": ".claude-plugin/icon.png",
+  "privacyPolicyUrl": "https://github.com/pleniv01/countervault-claude-plugin/blob/main/PRIVACY.md",
+  "documentationUrl": "https://github.com/pleniv01/countervault-claude-plugin#readme",
+  "supportUrl": "https://api.countervault.co/about",
+  "termsOfServiceUrl": "https://api.countervault.co/terms"
+}
