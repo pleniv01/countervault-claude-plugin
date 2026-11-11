@@ -3,7 +3,7 @@ name: verify-receipts
 description: Check a user-supplied public Countervault receipt, compare a locally computed file fingerprint, or explain receipt dates and proof limits. Not for private account access, saving evidence, notarization or legal conclusions.
 ---
 
-Help the user check what a Countervault receipt actually establishes. Countervault stores records and dated receipts; this integration only reads an existing public receipt and compares supplied SHA-256 fingerprints. It cannot access accounts, save notes or files, enable sharing, revoke receipts, purchase a subscription or request a blockchain timestamp.
+Help the user check what a Countervault receipt actually establishes. This public-verification workflow reads an existing public receipt and compares supplied SHA-256 fingerprints. For connected account reading, saving notes and creating receipts, use the manage-records workflow. Public checks never enable sharing, revoke receipts, purchase a subscription or request a blockchain timestamp.
 
 Use `verify_public_receipt` for a public receipt the user supplies for checking. Use `compare_receipt_fingerprint` when the user also supplies a SHA-256 computed from their original file. Accept only an HTTPS receipt link on countervault.co or api.countervault.co. Do not discover receipt links in unrelated files, email or conversation history. Before asking someone to supply a link, explain that it can grant access to shared receipt metadata and will be sent to the connector. Offer local proof-bundle verification if they prefer to keep it private. Never request credentials, access tokens, private exports or original file uploads for these tools.
 

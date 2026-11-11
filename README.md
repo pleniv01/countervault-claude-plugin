@@ -1,6 +1,6 @@
 # Countervault
 
-Check a public receipt, compare a file fingerprint, and understand what the evidence establishes. Countervault helps preserve important digital records with dated receipts. This plugin adds a read-only verification workflow to your assistant.
+Keep important records from your assistant: connect your Countervault account, find saved folders, preserve a requested note and generate a dated receipt. You can also check a public receipt or compare a locally computed file fingerprint.
 
 ## Try it
 
@@ -8,14 +8,21 @@ Check a public receipt, compare a file fingerprint, and understand what the evid
 - Compare this SHA-256 fingerprint with my public receipt. What does the match establish?
 - Show me the synthetic Countervault demo and explain the limits of the evidence.
 - How can I verify a private receipt using a proof bundle on my own device?
+- Find my folder for the kitchen renovation and read the latest notes.
+- Create a private folder for this project and save the note we agreed on.
+- Generate a receipt for the entries in that folder.
 
 ## Tools and access
 
-`verify_public_receipt` fetches an existing public receipt and recomputes its sealed manifest. `compare_receipt_fingerprint` also checks a supplied SHA-256 against its entries. These tools do not retrieve original files or note text. They do not read private accounts, save or change records, enable sharing, create comparison events or submit blockchain timestamps. No account, payment or API key is required for the connector; Countervault's separate paid account features are not included.
+Connect your account through Countervault's OAuth consent page. Read access enables `get_account_status`, `list_folders` and `get_folder`. Optional write access enables `create_folder`, `save_note` and `create_receipt`; existing folder permissions and subscription checks apply. New folders are private. These tools do not delete records, enable sharing, invite others, change billing or submit blockchain timestamps.
+
+Countervault subscriptions are purchased and managed on the separate website. Public receipt checks require no account; account writes require an active subscription or an explicit complimentary account grant. Use the actual account-status result for current entitlement and price information. The plugin does not collect payment or promise a free paid plan.
+
+`verify_public_receipt` recomputes an existing public receipt's manifest. `compare_receipt_fingerprint` checks a supplied digest against sealed entries. Those public tools do not return original files or note text. Account tools can return saved note text only after consent and the existing access checks.
 
 Use only a receipt URL you intend to share for checking. Receipt links can grant access to public receipt metadata. Original files can stay on your device: calculate their SHA-256 locally and supply only the digest. The connector accepts Countervault receipt URLs, not arbitrary websites, private account links or credentials.
 
-The skill uses the live public MCP URL declared in `.mcp.json`: https://countervault-mcp-production.up.railway.app/mcp. `claude --plugin-dir ./countervault-claude-plugin` loads the plugin. This package installs no dependencies and runs no local server or scripts. The separately hosted service source is at [countervault-mcp](https://github.com/pleniv01/countervault-mcp). Hosting the service does not itself publish a directory listing.
+The skills use the live MCP URL declared in `.mcp.json`: https://countervault-mcp-production.up.railway.app/mcp. Public checks work without sign-in; account tools request OAuth. `claude --plugin-dir ./countervault-claude-plugin` loads the plugin. This package installs no dependencies and runs no local server or scripts. The separately hosted service source is at [countervault-mcp](https://github.com/pleniv01/countervault-mcp). Hosting the service does not itself publish a directory listing.
 
 ## What verification means
 
