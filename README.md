@@ -15,7 +15,7 @@ Check a public receipt, compare a file fingerprint, and understand what the evid
 
 Use only a receipt URL you intend to share for checking. Receipt links can grant access to public receipt metadata. Original files can stay on your device: calculate their SHA-256 locally and supply only the digest. The connector accepts Countervault receipt URLs, not arbitrary websites, private account links or credentials.
 
-The skill uses the public MCP URL declared in `.mcp.json`, once deployed. For local development run `npm ci`, `npm test`, then `npm start`; the server listens on port 3000 or `PORT`. `claude --plugin-dir ./countervault-claude-plugin` loads the plugin. Hosting this source does not itself publish a directory listing.
+The skill uses the live public MCP URL declared in `.mcp.json`: https://countervault-mcp-production.up.railway.app/mcp. `claude --plugin-dir ./countervault-claude-plugin` loads the plugin. This package installs no dependencies and runs no local server or scripts. The separately hosted service source is at [countervault-mcp](https://github.com/pleniv01/countervault-mcp). Hosting the service does not itself publish a directory listing.
 
 ## What verification means
 
@@ -25,6 +25,6 @@ The `demo` input is a synthetic fixture. Its receipt number explicitly says it i
 
 ## Privacy and support
 
-Read [connector and plugin privacy](PRIVACY.md), [Countervault website privacy](https://api.countervault.co/privacy) and [terms](https://api.countervault.co/terms). Support and operator contact are on [Countervault's About page](https://api.countervault.co/about). Do not send credentials or private files in support requests.
+Read [connector and plugin privacy](PRIVACY.md), [Countervault website privacy](https://api.countervault.co/privacy) and [terms](https://api.countervault.co/terms). For public integration support use [GitHub Issues](https://github.com/pleniv01/countervault-claude-plugin/issues). Do not post receipt links, credentials, fingerprints or private files in public issues. The website's private-contact instructions are on [Countervault's About page](https://api.countervault.co/about).
 
 The plugin identifies Countervault at countervault.co. It is independent of Anthropic and OpenAI. The integration provides integrity checks and explanations; it does not provide legal advice. [MIT license](LICENSE) covers the plugin source and instructions; Countervault's brand and application are separate.

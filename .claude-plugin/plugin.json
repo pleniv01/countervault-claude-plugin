@@ -1,7 +1,7 @@
 {
   "name": "countervault",
   "displayName": "Countervault",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Check public Countervault receipts, compare file fingerprints and understand what the evidence establishes.",
   "author": { "name": "Countervault", "url": "https://countervault.co" },
   "homepage": "https://countervault.co",
@@ -10,6 +10,6 @@
   "icon": ".claude-plugin/icon.png",
   "privacyPolicyUrl": "https://github.com/pleniv01/countervault-claude-plugin/blob/main/PRIVACY.md",
   "documentationUrl": "https://github.com/pleniv01/countervault-claude-plugin#readme",
-  "supportUrl": "https://api.countervault.co/about",
+  "supportUrl": "https://github.com/pleniv01/countervault-claude-plugin/issues",
   "termsOfServiceUrl": "https://api.countervault.co/terms"
 }
