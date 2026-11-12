@@ -9,7 +9,7 @@ Keep important records from your assistant: connect your Countervault account, f
 - Show me the synthetic Countervault demo and explain the limits of the evidence.
 - How can I verify a private receipt using a proof bundle on my own device?
 - Find my folder for the kitchen renovation and read the latest notes.
-- Create a private folder for this project and save the note we agreed on.
+- Create a private folder for this project and save my own words as a note.
 - Generate a receipt for the entries in that folder.
 
 ## Tools and access
@@ -35,3 +35,7 @@ The `demo` input is a synthetic fixture. Its receipt number explicitly says it i
 Read [connector and plugin privacy](PRIVACY.md), [Countervault website privacy](https://api.countervault.co/privacy) and [terms](https://api.countervault.co/terms). For public integration support use [GitHub Issues](https://github.com/pleniv01/countervault-claude-plugin/issues). Do not post receipt links, credentials, fingerprints or private files in public issues. The website's private-contact instructions are on [Countervault's About page](https://api.countervault.co/about).
 
 The plugin identifies Countervault at countervault.co. It is independent of Anthropic and OpenAI. The integration provides integrity checks and explanations; it does not provide legal advice. [MIT license](LICENSE) covers the plugin source and instructions; Countervault's brand and application are separate.
+
+## Provenance update (0.3.0 review)
+
+The paired MCP update preserves record source labels and requires explicit text_origin on save_note. User-authored notes stay receipted records; assistant analysis cannot be saved as a user-authored note. Until interpretation saving is implemented, that request returns saved=false. Receipt integrity does not establish truth or authorship. This package is a host integration, not a background model runner. Roll out with the corresponding reviewed API/MCP changes; changing package source does not publish a directory release.
