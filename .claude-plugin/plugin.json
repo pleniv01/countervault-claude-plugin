@@ -1,7 +1,7 @@
 {
   "name": "countervault",
   "displayName": "Countervault",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Use your Countervault account to find records, save requested notes and generate dated receipts. Check public receipts and file fingerprints.",
   "author": {
     "name": "Countervault",
