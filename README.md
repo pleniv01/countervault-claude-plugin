@@ -14,7 +14,7 @@ Keep important records from your assistant: connect your Countervault account, f
 
 ## Tools and access
 
-Connect your account through Countervault's OAuth consent page. Read access enables `get_account_status`, `list_folders` and `get_folder`. Optional write access enables `create_folder`, `save_note` and `create_receipt`; existing folder permissions and subscription checks apply. New folders are private. These tools do not delete records, enable sharing, invite others, change billing or submit blockchain timestamps.
+Connect your account through Countervault's OAuth consent page. Read access enables `get_account_status`, `list_folders`, `get_folder` and `get_record_history`. Optional write access enables `create_folder`, `save_note` and `create_receipt`; existing folder permissions and subscription checks apply. New folders are private. These tools do not delete records, enable sharing, invite others, change billing or submit blockchain timestamps.
 
 Countervault subscriptions are purchased and managed on the separate website. Public receipt checks require no account; account writes require an active subscription or an explicit complimentary account grant. Use the actual account-status result for current entitlement and price information. The plugin does not collect payment or promise a free paid plan.
 
@@ -39,3 +39,7 @@ The plugin identifies Countervault at countervault.co. It is independent of Anth
 ## Provenance update (0.3.0 review)
 
 The paired MCP update preserves record source labels and requires explicit text_origin on save_note. User-authored notes stay receipted records; assistant analysis cannot be saved as a user-authored note. Until interpretation saving is implemented, that request returns saved=false. Receipt integrity does not establish truth or authorship. This package is a host integration, not a background model runner. Roll out with the corresponding reviewed API/MCP changes; changing package source does not publish a directory release.
+
+## Record versions (0.4.0 review)
+
+Read current entries with get_folder and earlier versions with get_record_history. The user can request a note correction with an explicit target, new text and reason; existing author/owner, write-access and storage rules apply. Earlier text and receipts remain unchanged. No deployment or directory publication is implied by this source update.
