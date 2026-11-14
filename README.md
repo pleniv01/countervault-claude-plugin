@@ -49,3 +49,7 @@ Read current entries with get_folder and earlier versions with get_record_histor
 Preserve returned storage_mode and content_stored separately: linked means a fingerprint/location, stored means Countervault retains content, and content_stored indicates a downloadable byte copy. Missing values on older results are unknown. get_account_status reports the same storage allowance used by web saves. Local attachments are selected, reviewed and uploaded in Countervault's website; MCP adds no file-upload/download tool. Never save copies, excerpts or images from linked files. A saved copy does not prove historical custody or the truth of its contents. Direct packet preparation to the website, where users explicitly choose whether to include saved copies.
 
 This source update requires the paired API/MCP review branches; it does not publish a directory package or deploy production.
+
+## File replacement (0.5.1 review)
+
+The paired website adds explicit local-file replacement after selecting a current entry and reviewing its file, title and reason. MCP reads preserve current/history distinctions; assistants direct replacements to the website and gain no raw-file tool. This review branch is separate from the deployed 0.5.0 storage release.
