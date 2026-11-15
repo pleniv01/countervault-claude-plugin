@@ -53,3 +53,7 @@ This source update requires the paired API/MCP review branches; it does not publ
 ## File replacement (0.5.1 review)
 
 The paired website adds explicit local-file replacement after selecting a current entry and reviewing its file, title and reason. MCP reads preserve current/history distinctions; assistants direct replacements to the website and gain no raw-file tool. This review branch is separate from the deployed 0.5.0 storage release.
+
+### Principal-access review (0.6.0)
+
+Paired API/MCP source adds explicit connection-consent notices, durable assistant grants, renewed authorization for legacy connections, and Restricted item filtering. Completed writes are rechecked before returning cached results. Restricted settings are managed by the folder owner in Countervault and preserve existing human access/sharing/exports; they do not recall public metadata or chat copies. This is a review candidate until the paired API migrations and services are released. Publishing source does not publish an app-directory listing.
