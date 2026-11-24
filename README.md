@@ -1,5 +1,7 @@
 # Countervault
 
+Operated by [Post Hoc Labs](https://posthoc.me), a registered Maine DBA. Product names and support addresses remain unchanged.
+
 Keep important records from your assistant: connect your Countervault account, find saved folders, preserve a requested note and generate a dated receipt. You can also check a public receipt or compare a locally computed file fingerprint.
 
 ## Try it
