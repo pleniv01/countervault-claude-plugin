@@ -59,3 +59,8 @@ The paired website adds explicit local-file replacement after selecting a curren
 ### Principal-access review (0.6.0)
 
 Paired API/MCP source adds explicit connection-consent notices, durable assistant grants, renewed authorization for legacy connections, and Restricted item filtering. Completed writes are rechecked before returning cached results. Restricted settings are managed by the folder owner in Countervault and preserve existing human access/sharing/exports; they do not recall public metadata or chat copies. This is a review candidate until the paired API migrations and services are released. Publishing source does not publish an app-directory listing.
+
+
+### Quick Start tools (0.8.0)
+
+`start_quick_scan` opens the web interview without starting work. `get_scan_suggestions` reads pending cluster summaries only after separate `countervault:quickstart` approval. Review, source grants, consent and assignment happen on Countervault. Requires the paired API migration 0049 and MCP 0.8.0. Source preparation does not imply directory publication or an enabled Gmail connector.
