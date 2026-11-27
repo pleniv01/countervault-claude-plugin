@@ -64,3 +64,6 @@ Paired API/MCP source adds explicit connection-consent notices, durable assistan
 ### Quick Start tools (0.8.0)
 
 `start_quick_scan` opens the web interview without starting work. `get_scan_suggestions` reads pending cluster summaries only after separate `countervault:quickstart` approval. Review, source grants, consent and assignment happen on Countervault. Requires the paired API migration 0049 and MCP 0.8.0. Source preparation does not imply directory publication or an enabled Gmail connector.
+
+
+Countervault 0.8.1: Quick Start request status is available through the existing optional read scope; cloud requests can finish while the user is away. Launch/cancel/email controls stay in Countervault. Source preparation does not imply directory publication.
